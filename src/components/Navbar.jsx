@@ -1,50 +1,41 @@
-import React, { useState } from 'react'
-import { close, logo, menu } from '../assets'
-import { navLinks } from '../constants'
+import React from 'react';
+import { twitter } from '../assets';
+import styles from '../style';
 
 const Navbar = () => {
-
-  const [toggle, setToggle] = useState(false)
-
   return (
-    <nav className='w-full flex py-6 justify-between items-center navbar'>
-      <img src={logo} alt='hoobank' className='w-[124px] h-[32px]'/>
-      <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
-        {navLinks.map((nav, i) => (
-          <li 
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mr-10'} text-white mr-10`}
-          >
-            <a href={`#${nav.id}`}>
-              {nav.title}
-            </a>
-          </li>        
-        ))}
-      </ul>
-      <div className='sm:hidden flex flex-1 justify-end items-center'>
-        <img
-          src={toggle ? close : menu}
-          alt='menu'
-          className='w-[28px] h-[28px] object-contain'
-          onClick={() => setToggle((previous) => !previous)}
-        />
-        <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}>
-          <ul className='list-none flex flex-col justify-end items-center flex-1'>
-            {navLinks.map((nav, i) => (
-              <li 
-                key={nav.id}
-                className={`font-poppins font-normal cursor-pointer text-[16px] ${i === navLinks.length - 1 ? 'mr-0' : 'mb-4'} text-white mr-10`}
-              >
-                <a href={`#${nav.id}`}>
-                  {nav.title}
-                </a>
-              </li>        
-            ))}
-          </ul>
-        </div>
+    <nav className={`${styles.flexBetween} w-full py-6`}>
+      <div className="flex-1">
+        <h1 className="font-poppins font-bold text-[24px] text-white">WaddleAI</h1>
       </div>
+      <ul className="list-none flex flex-row justify-end items-center flex-1 space-x-8">
+        <li className="text-white font-poppins text-[16px] cursor-pointer hover:text-secondary">
+          <a href="https://abs.xyz" target="_blank" rel="noopener noreferrer">
+            Abstract
+          </a>
+        </li>
+        <li className="text-white font-poppins text-[16px] cursor-pointer hover:text-secondary">
+          <a href="https://portal.testnet.abs.xyz/bridge/" target="_blank" rel="noopener noreferrer">
+            Testnet Bridge
+          </a>
+        </li>
+        <li className="text-white font-poppins text-[16px] cursor-pointer hover:text-secondary">
+          <a
+            href="https://testnet.freee.xyz/collect/abst:0xD15731eCaC68883b20A5f6658364B897f1Cfd459"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            NFT Mint
+          </a>
+        </li>
+        <li className="cursor-pointer">
+          <a href="https://x.com/nullbeacon" target="_blank" rel="noopener noreferrer">
+            <img src={twitter} alt="twitter" className="w-[24px] h-[24px] object-contain" />
+          </a>
+        </li>
+      </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

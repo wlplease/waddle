@@ -8,15 +8,15 @@ const FeatureCard = ({ icon, title, content, index }) => (
     <div className={`w-[64px] h-[64px] rounded-full ${styles.flexCenter} bg-dimBlue`}>
       <img
         src={icon}
-        alt='icon'
-        className='w-[50%] h-[50%] object-contain'
+        alt="icon"
+        className="w-[50%] h-[50%] object-contain"
       />
     </div>
-    <div className='flex-1 flex flex-col ml-3'>
-      <h4 className='font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1'>
+    <div className="flex-1 flex flex-col ml-3">
+      <h4 className="font-poppins font-semibold text-white text-[18px] leading-[23px] mb-1">
         {title}
       </h4>
-      <p className='font-poppins font-normal text-dimWhite text-[16px] leading-[24px]'>
+      <p className="font-poppins font-normal text-dimWhite text-[16px] leading-[24px]">
         {content}
       </p>
     </div>
@@ -25,16 +25,13 @@ const FeatureCard = ({ icon, title, content, index }) => (
 
 const Business = () => {
   return (
-    <section id='features' className={layout.section}>
+    <section id="features" className={layout.section}>
       <div className={layout.sectionInfo}>
-        <h2 className={styles.heading2}>You do the business, <br className='sm:block hidden'/>we'll handle the money.</h2>
+        <h2 className={styles.heading2}>Dive into WaddleAI, <br className="sm:block hidden"/>explore the Abstract blockchain</h2>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
-          With the right credit card, 
-          you can improve your financial life by building credit,
-          earning rewards and saving money.
-          But with hundreds of credit cards on the market.
+          WaddleAI simplifies NFTs and Abstract blockchain innovation, empowering you to connect and create. Discover a decentralized future built on creativity and community.
         </p>
-        <Button styles='mt-10'/>
+        <Button styles="mt-10"/>
       </div>
       <div className={`${layout.sectionImg} flex-col`}>
         {features.map((feature, index) => (
