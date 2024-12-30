@@ -1,5 +1,5 @@
 import twitter from './twitter.svg';
-import star from './star.svg'; // Ensure this path matches the actual file location
+import star from './Star.svg'; // Capitalized to match the file name
 import shield from './shield.svg';
 import send from './send.svg';
 import waddlemain from './waddlemain.webp';
