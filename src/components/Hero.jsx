@@ -27,7 +27,7 @@ const Hero = () => {
           </div>
         </div>
         <h1 className='font-quicksand font-bold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full'>
-          Blockchain Simplified.
+          on Abstract Blockchain.
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
           Explore the power of blockchain with WaddleAI, your friendly guide to decentralized innovation, NFT communities, and cutting-edge technology.
